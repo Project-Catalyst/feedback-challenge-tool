@@ -22,6 +22,13 @@
       <div>Comments count: <b>{{proposal.comments_count}}</b></div>
     </div>
     <div class="box">
+      <b-message>
+        <p>
+          <strong>Disclaimer</strong>: the data is
+          <strong>not updated</strong> in real time and therefore is likely
+          different from those shown in IdeaScale.
+        </p>
+      </b-message>
       <div class="buttons">
         <b-button
           tag="a"

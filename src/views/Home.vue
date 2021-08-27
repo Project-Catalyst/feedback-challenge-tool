@@ -16,7 +16,7 @@
         <i>#FeedbackChallenge</i>
       </p>
       <p>
-        <strong>Disclaimer</strong>: the data about is
+        <strong>Disclaimer</strong>: the data is
         <strong>not updated</strong> in real time and therefore is likely
         different from those shown in IdeaScale.
       </p>
