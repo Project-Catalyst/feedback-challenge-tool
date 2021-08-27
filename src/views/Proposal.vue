@@ -37,7 +37,15 @@
           icon-left="telegram"
           type="is-primary"
           target="blank">
-          Share on TG your Feedback!
+          Share your feedback on Telegram!
+        </b-button>
+        <b-button
+          tag="a"
+          :href="twitterShareLink"
+          icon-left="twitter"
+          type="is-primary"
+          target="blank">
+          Share your feedback on Twitter!
         </b-button>
       </div>
     </div>
@@ -81,6 +89,11 @@ export default {
       var url = encodeURIComponent(this.proposal.url)
       var text = encodeURIComponent(`#FeedbackChallenge ${this.proposal.title}`)
       return `https://t.me/share/url?url=${url}&text=${text}`
+    },
+    twitterShareLink() {
+      var url = encodeURIComponent(this.proposal.url)
+      var text = encodeURIComponent(`#FeedbackChallenge ${this.proposal.title}`)
+      return `https://twitter.com/intent/tweet?url=${url}&text=${text}`
     }
   },
   methods: {

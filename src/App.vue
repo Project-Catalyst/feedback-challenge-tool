@@ -29,6 +29,19 @@
     <footer class="footer">
       <div class="content has-text-centered">
         <p>Made by Catalyst Community for the Catalyst Community</p>
+        <p class="has-text-weight-bold">
+          If you want to support the development of the Community Tools you can donate some ADA to:
+          <br />
+          <span class="is-ellipsis">
+            addr1q9hh7nqmantwkd5upsamc6p54ckseksmngh858ng788hwfa99jp2g3s20g7k2hvj6rtl00l647hxvw3a5a84m3mzzlmqvartlu
+          </span>
+          <b-button
+            @click="copy"
+            type="is-primary"
+            size="is-small"
+            icon-left="content-copy">
+          </b-button>
+        </p>
       </div>
     </footer>
   </div>
@@ -71,7 +84,15 @@ export default {
       this.axios.get('proposals.json').then((res) => {
         this.proposals = res.data
       })
-    }
+    },
+    copy() {
+      this.$clipboard('addr1q9hh7nqmantwkd5upsamc6p54ckseksmngh858ng788hwfa99jp2g3s20g7k2hvj6rtl00l647hxvw3a5a84m3mzzlmqvartlu')
+      this.$buefy.notification.open({
+        message: 'Address copied to clipboard!',
+        type: 'is-primary',
+        position: 'is-bottom-right'
+      })
+    },
   },
   computed: {
     filteredProposals() {
@@ -109,5 +130,12 @@ export default {
 }
 body {
   margin: 0;
+}
+.is-ellipsis {
+  display: inline-block;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  vertical-align: middle;
 }
 </style>
