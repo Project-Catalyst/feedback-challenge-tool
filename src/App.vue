@@ -9,11 +9,6 @@
           #FeedbackChallenge Tool
         </b-navbar-item>
       </template>
-      <template #end>
-        <b-navbar-item class="has-text-weight-bold" tag="a" target="_blank" href="https://cardanoscan.io/pool/b61f05ec1e907ab9b069eaec6c664056c16f56cab59076109c66d2ae">
-          Stake with [AIM] pool
-        </b-navbar-item>
-      </template>
     </b-navbar>
     <div class="section container">
       <div class="filter">
@@ -41,7 +36,7 @@
           </a>
         </p>
         <p class="icons">
-          <a href="https://github.com/Project-Catalyst/ca-tool" target="_blank">
+          <a href="https://github.com/Project-Catalyst/feedback-challenge-tool" target="_blank">
             <b-icon icon="github" size="small" />
           </a>
           <a href="https://twitter.com/AimCardano" target="_blank">
