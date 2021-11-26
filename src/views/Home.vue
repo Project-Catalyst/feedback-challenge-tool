@@ -12,7 +12,7 @@
         comments, based on the challenge filter that you have selected.
       </p>
       <p class="mb-2">
-        Share on Project Catalyst Telegram Channel your action using the hashtag
+        Share on <a href="https://t.me/ProjectCatalystChat" target="_blank">Project Catalyst Telegram Channel</a> your action using the hashtag
         <i>#FeedbackChallenge</i>
       </p>
       <p>
