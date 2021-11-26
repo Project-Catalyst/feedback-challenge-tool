@@ -2,22 +2,37 @@
   <div class="proposal">
     <div class="content box">
       <h5>{{category.title}}</h5>
+      <h6><span class="has-text-weight-normal">Author:</span> {{proposal.author}}</h6>
       <h1 class="mt-2">{{proposal.title}}</h1>
-      <div class="mb-4">
+      <div class="mb-4" v-if="proposal.problem_statement">
         <h3 class="mb-1">Problem statement</h3>
-        <p>{{proposal.description}}</p>
-      </div>
-      <div class="mb-4" v-if="proposal.relevant_experience">
-        <h3 class="mb-1">Relevant experience</h3>
-        <p>{{proposal.relevant_experience}}</p>
+        <p>{{proposal.problem_statement}}</p>
       </div>
       <div class="mb-4" v-if="proposal.problem_solution">
         <h3 class="mb-1">Problem solution</h3>
         <p>{{proposal.problem_solution}}</p>
       </div>
+      <div class="mb-4" v-if="proposal.relevant_experience">
+        <h3 class="mb-1">Relevant experience</h3>
+        <p>{{proposal.relevant_experience}}</p>
+      </div>
       <div class="mb-4" v-if="proposal.importance">
         <h3 class="mb-1">Importance</h3>
         <p>{{proposal.importance}}</p>
+      </div>
+      <div class="mb-4" v-if="proposal.how_does_success_looks_like_">
+        <h3 class="mb-1">What does success look like?</h3>
+        <p>{{proposal.how_does_success_looks_like_}}</p>
+      </div>
+      <div class="mb-4" v-if="proposal.challenge_brief">
+        <h3 class="mb-1">Challenge brief</h3>
+        <p>{{proposal.challenge_brief}}</p>
+      </div>
+      <div class="mb-4" v-if="proposal.requested_funds">
+        Funds requested: <b>{{proposal.requested_funds}}</b>
+      </div>
+      <div class="mb-4" v-if="proposal.requested_funds_coti">
+        Funds requested: <b>{{proposal.requested_funds_coti}}</b>
       </div>
       <div>Comments count: <b>{{proposal.comments_count}}</b></div>
     </div>
