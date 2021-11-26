@@ -3,7 +3,7 @@
     <b-message>
       <p class="mb-2">
         The #FeedbackChallengeTool is a tool to help Cardano Catalyst community
-        members to better distribuite the feedback among all the proposals
+        members to better distribute the feedback among all the proposals
         submitted in F7.
       </p>
       <p><b>How it works</b></p>
