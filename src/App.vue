@@ -9,6 +9,11 @@
           #FeedbackChallenge Tool
         </b-navbar-item>
       </template>
+      <template #end>
+        <b-navbar-item class="has-text-weight-bold" tag="a" target="_blank" href="https://cardanoscan.io/pool/b61f05ec1e907ab9b069eaec6c664056c16f56cab59076109c66d2ae">
+          Stake with [AIM] pool
+        </b-navbar-item>
+      </template>
     </b-navbar>
     <div class="section container">
       <div class="filter">
@@ -29,18 +34,22 @@
     <footer class="footer">
       <div class="content has-text-centered">
         <p>Made by Catalyst Community for the Catalyst Community</p>
-        <p class="has-text-weight-bold">
-          If you want to support the development of the Community Tools you can donate some ADA to:
-          <br />
-          <span class="is-ellipsis">
-            addr1q9hh7nqmantwkd5upsamc6p54ckseksmngh858ng788hwfa99jp2g3s20g7k2hvj6rtl00l647hxvw3a5a84m3mzzlmqvartlu
-          </span>
-          <b-button
-            @click="copy"
-            type="is-primary"
-            size="is-small"
-            icon-left="content-copy">
-          </b-button>
+        <p><img class="aim-logo" src="@/assets/images/aim-logo.png" alt="Cardano AIM" /></p>
+        <p class="is-size-4 has-text-weight-bold">
+          <a href="https://cardanoscan.io/pool/b61f05ec1e907ab9b069eaec6c664056c16f56cab59076109c66d2ae" target="_blank">
+            Stake with [AIM] pool
+          </a>
+        </p>
+        <p class="icons">
+          <a href="https://github.com/Project-Catalyst/ca-tool" target="_blank">
+            <b-icon icon="github" size="small" />
+          </a>
+          <a href="https://twitter.com/AimCardano" target="_blank">
+            <b-icon icon="twitter" size="small" />
+          </a>
+          <a href="https://t.me/joinchat/Ivl50eWG7r0zODI1" target="_blank">
+            <b-icon icon="telegram" size="small" />
+          </a>
         </p>
       </div>
     </footer>
@@ -81,18 +90,10 @@ export default {
       }
     },
     remoteUpdate() {
-      this.axios.get('proposals.json').then((res) => {
+      this.axios.get('data/f7/proposals.json').then((res) => {
         this.proposals = res.data
       })
-    },
-    copy() {
-      this.$clipboard('addr1q9hh7nqmantwkd5upsamc6p54ckseksmngh858ng788hwfa99jp2g3s20g7k2hvj6rtl00l647hxvw3a5a84m3mzzlmqvartlu')
-      this.$buefy.notification.open({
-        message: 'Address copied to clipboard!',
-        type: 'is-primary',
-        position: 'is-bottom-right'
-      })
-    },
+    }
   },
   computed: {
     filteredProposals() {
@@ -137,5 +138,8 @@ body {
   overflow: hidden;
   text-overflow: ellipsis;
   vertical-align: middle;
+}
+.aim-logo {
+  width: 150px;
 }
 </style>

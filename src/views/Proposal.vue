@@ -105,7 +105,7 @@ export default {
   },
   methods: {
     remoteUpdate() {
-      this.axios.get('proposals.json').then((res) => {
+      this.axios.get('data/f7/proposals.json').then((res) => {
         this.proposals = res.data
       })
     }
