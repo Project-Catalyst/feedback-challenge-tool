@@ -8,6 +8,10 @@
         <h3 class="mb-1">Problem statement</h3>
         <p>{{proposal.problem_statement}}</p>
       </div>
+      <div class="mb-4" v-if="proposal.description">
+        <h3 class="mb-1">Problem statement</h3>
+        <p>{{proposal.description}}</p>
+      </div>
       <div class="mb-4" v-if="proposal.problem_solution">
         <h3 class="mb-1">Problem solution</h3>
         <p>{{proposal.problem_solution}}</p>
