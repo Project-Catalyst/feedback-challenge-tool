@@ -24,9 +24,9 @@
         <h3 class="mb-1">Importance</h3>
         <p>{{proposal.importance}}</p>
       </div>
-      <div class="mb-4" v-if="proposal.how_does_success_looks_like_">
+      <div class="mb-4" v-if="proposal.how_does_success_look_like_">
         <h3 class="mb-1">What does success look like?</h3>
-        <p>{{proposal.how_does_success_looks_like_}}</p>
+        <p>{{proposal.how_does_success_look_like_}}</p>
       </div>
       <div class="mb-4" v-if="proposal.challenge_brief">
         <h3 class="mb-1">Challenge brief</h3>
@@ -124,7 +124,7 @@ export default {
   },
   methods: {
     remoteUpdate() {
-      this.axios.get('data/f7/proposals.json').then((res) => {
+      this.axios.get('data/f9/proposals.json').then((res) => {
         this.proposals = res.data
       })
     }

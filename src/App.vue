@@ -62,7 +62,8 @@ export default {
       proposals: [],
       currentFilter: [],
       currentIndex: 0,
-      interval: false
+      interval: false,
+      placeholders: ['tbd', 'placeholder', 'test', 'coming soon', 'tba', 'draf', 'draft', 'placeholder 1', 'place holder', 'updating', 'processing', 'todo']
     }
   },
   components: {
@@ -85,7 +86,7 @@ export default {
       }
     },
     remoteUpdate() {
-      this.axios.get('data/f7/proposals.json').then((res) => {
+      this.axios.get('data/f9/proposals.json').then((res) => {
         this.proposals = res.data
       })
     }
@@ -97,6 +98,12 @@ export default {
         let filters = this.currentFilter.map(el => el.id)
         proposals = this.proposals.filter(p => filters.indexOf(p.category) > -1)
       }
+      proposals = proposals.filter(p => {
+        return (
+          (this.placeholders.indexOf(p.title.trim().toLowerCase()) === -1) &&
+          (this.placeholders.indexOf(p.description.trim().toLowerCase()) === -1)
+        )
+      })
       return proposals
         .sort(() => (Math.random() > .5) ? 1 : -1)
         .sort(
